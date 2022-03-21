@@ -27,21 +27,20 @@ export class news extends Component {
     }
 
     async componentDidMount() {
-        // https://gnews.io/api/v4/search?q=example&token=API-Token
-        let url = `https://gnews.io/api/v4/top-headlines?country=in&topic=${this.props.category}&token=d47184ecca872553928a48963b00a319&page=${this.state.page}&max=100`;
+        let url = `https://newsapi.org/v2/top-headlines?country=in&category=${this.props.category}&apiKey=91da526b19a44a05bf694475448c0070&pageSize=12`;
         this.setState({ loading: true })
         let data = await fetch(url);
         let parseddata = await data.json();
         this.setState({ loading: false })
         this.setState({
             article: parseddata.articles,
-            totalResults: parseddata.totalArticles
+            totalResults: parseddata.totalResults
         })
     }
 
     fetchMoreData = async () => {
-        let url = `https://gnews.io/api/v4/top-headlines?country=in&topic=${this.props.category}&token=d47184ecca872553928a48963b00a319&page=${this.state.page}&max=100`;
 
+        let url = `https://newsapi.org/v2/top-headlines?country=in&category=${this.props.category}&apiKey=91da526b19a44a05bf694475448c0070&page=${this.state.page + 1}&pageSize=12`;
         this.setState({
             page: this.state.page + 1
         });
@@ -51,7 +50,7 @@ export class news extends Component {
         this.setState({
 
             // loading: false,
-            totalResults: parseddata.totalArticles,
+            totalResults: parseddata.totalResults,
             article: this.state.article.concat(parseddata.articles)
         })
 
@@ -100,8 +99,8 @@ export class news extends Component {
                     <div className='container' >
                         <div className="row">
                             {this.state.article.map((e) => {
-                                return <div className="col-md-4 my-2 mb-3 d-flex align-items-stretch" key={e.source.url}>
-                                    <NewsItems title={e.title} description={e.description} imageurl={e.image} url={e.url}
+                                return <div className="col-md-4 my-2 mb-3 d-flex align-items-stretch" key={e.url}>
+                                    <NewsItems title={e.title} description={e.description} imageurl={e.urlToImage} url={e.url}
                                         author={e.author ? e.author : "Unknown"} time={e.publishedAt} />
                                 </div>
 
