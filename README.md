@@ -1,3 +1,5 @@
+#HOSTED URL:-https://news24-7-latest-news-app.vercel.app/entertainment
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
