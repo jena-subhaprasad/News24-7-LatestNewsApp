@@ -27,7 +27,10 @@ export class news extends Component {
     }
 
     async componentDidMount() {
-        let url = `https://newsapi.org/v2/top-headlines?country=in&category=${this.props.category}&apiKey=91da526b19a44a05bf694475448c0070&pageSize=12`;
+        // https://saurav.tech/NewsAPI/top-headlines/category/health/in.json
+        // let url = `https://newsapi.org/v2/top-headlines?country=in&category=${this.props.category}&apiKey=91da526b19a44a05bf694475448c0070&pageSize=12`;
+
+        let url = `https://saurav.tech/NewsAPI/top-headlines/category/${this.props.category}/in.json`;
         this.setState({ loading: true })
         let data = await fetch(url);
         let parseddata = await data.json();
@@ -40,7 +43,9 @@ export class news extends Component {
 
     fetchMoreData = async () => {
 
-        let url = `https://newsapi.org/v2/top-headlines?country=in&category=${this.props.category}&apiKey=91da526b19a44a05bf694475448c0070&page=${this.state.page + 1}&pageSize=12`;
+       // let url = `https://newsapi.org/v2/top-headlines?country=in&category=${this.props.category}&apiKey=91da526b19a44a05bf694475448c0070&page=${this.state.page + 1}&pageSize=12`;
+        let url = `https://saurav.tech/NewsAPI/top-headlines/category/${this.props.category}/in.json`;
+
         this.setState({
             page: this.state.page + 1
         });
