@@ -93,7 +93,7 @@ export class news extends Component {
 
     render() {
         return (<>
-            <div className="container my-1">
+            <div className="container ">
                 <h1 className="text-center" style={{ marginTop: '10px' }}><em>{this.Capitalize(this.props.logo)}</em></h1>
                 {/* {this.state.loading && <Spinner />} */}
                 <Carousel fart={this.state.article[3]} sart={this.state.article[2]} tart={this.state.article[0]}/>
@@ -103,19 +103,18 @@ export class news extends Component {
                     next={this.fetchMoreData}
                     hasMore={this.state.article.length < 44}
                     loader={<Spinner />}
-                >
-                  
- 
-                        <div className="row my-2">
+                >  <div className="row my-2">
                             {this.state.article.map((e) => {
-                                return <div className="col-md-4 my-2 mb-3 d-flex align-items-stretch" key={e.url}>
+                                return <div className="col-md-4 my-2 mb-2 d-flex align-items-stretch" key={e.url}>
                                     <NewsItems title={e.title} description={e.description} imageurl={e.urlToImage} url={e.url}
-                                        author={e.author ? e.author : "Unknown"} time={e.publishedAt} />
+                                        author={e.author ? e.author : "Unknown"} time={e.publishedAt} source={e.source.name} />
                                 </div>
 
                             })
                             }
                         </div>
+                        
+                        
                    
                 </InfiniteScroll>
                 {/* <div className="container d-flex justify-content-between my-3">

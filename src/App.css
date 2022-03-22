@@ -2,16 +2,7 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 /* .carousel-inner > .item > img {
   width:640px;
   height:360px;
@@ -35,12 +26,17 @@
   text-align: center;
   font-size:x-small;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.card:hover{
+  transform: scale(1.05);
+box-shadow: 0 10px 20px rgba(27, 27, 27, 0.12), 0 4px 8px rgba(32, 32, 32, 0.06);
 }
+.card{
+  background-color:rgba(231, 219, 219, 0.205);
+  border-radius: 15px;
+}
+
+#myCarousel{
+  margin-bottom: 30px;
+}
+
+

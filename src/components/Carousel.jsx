@@ -7,7 +7,7 @@ export class Carousel extends Component {
         return (
             <>
                 {/* <div className="container"> */}
-                    <div id="myCarousel" className="carousel slide" data-ride="carousel">
+                    <div id="myCarousel" className="carousel slide m-b-3" data-ride="carousel">
 
                         <ol className="carousel-indicators">
                             <li data-target="#myCarousel" data-slide-to="0" className="active"></li>
