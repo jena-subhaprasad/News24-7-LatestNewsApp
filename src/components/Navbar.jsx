@@ -17,25 +17,25 @@ export class Navbar extends Component {
                         <div className="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                                 <li className="nav-item">
-                                    <Link className="nav-link active" aria-current="page" to="/home">Home</Link>
+                                    <Link className="nav-link active text-decoration-none" aria-current="page" to="/home">Home</Link>
                                 </li>
                                 <li className="nav-item">
-                                    <Link className="nav-link" to="/health">Health</Link>
+                                    <Link className="nav-link text-decoration-none" to="/health">Health</Link>
                                 </li>
                                 <li className="nav-item">
-                                    <Link className="nav-link" to="/science">Science</Link>
+                                    <Link className="nav-link text-decoration-none" to="/science">Science</Link>
                                 </li>
                                 <li className="nav-item">
-                                    <Link className="nav-link" to="/sports">Sports</Link>
+                                    <Link className="nav-link text-decoration-none" to="/sports">Sports</Link>
                                 </li>
                                 <li className="nav-item">
-                                    <Link className="nav-link" to="/technology">Technology</Link>
+                                    <Link className="nav-link text-decoration-none" to="/technology">Technology</Link>
                                 </li>
                                 <li className="nav-item">
-                                    <Link className="nav-link" to="/business">Business</Link>
+                                    <Link className="nav-link text-decoration-none" to="/business">Business</Link>
                                 </li>
                                 <li className="nav-item">
-                                    <Link className="nav-link" to="/entertainment">Entertainment</Link>
+                                    <Link className="nav-link text-decoration-none" to="/entertainment">Entertainment</Link>
                                 </li>
 
 

@@ -3,6 +3,7 @@ import Footer from './Footer';
 import NewsItems from './NewsItems'
 import Spinner from './spinner';
 import InfiniteScroll from 'react-infinite-scroll-component';
+import Carousel from './Carousel';
 //91da526b19a44a05bf694475448c0070
 //f03e01d50c2e4ffabc8085e819003fcb
 
@@ -92,17 +93,20 @@ export class news extends Component {
 
     render() {
         return (<>
-            <div className="container my-3">
-                <h1 className="text-center" style={{ marginTop: '70px' }}>{this.Capitalize(this.props.logo)}</h1>
+            <div className="container my-1">
+                <h1 className="text-center" style={{ marginTop: '10px' }}><em>{this.Capitalize(this.props.logo)}</em></h1>
                 {/* {this.state.loading && <Spinner />} */}
+                <Carousel fart={this.state.article[3]} sart={this.state.article[2]} tart={this.state.article[0]}/>
+
                 <InfiniteScroll
                     dataLength={this.state.article.length}
                     next={this.fetchMoreData}
                     hasMore={this.state.article.length < 44}
                     loader={<Spinner />}
                 >
-                    <div className='container' >
-                        <div className="row">
+                  
+ 
+                        <div className="row my-2">
                             {this.state.article.map((e) => {
                                 return <div className="col-md-4 my-2 mb-3 d-flex align-items-stretch" key={e.url}>
                                     <NewsItems title={e.title} description={e.description} imageurl={e.urlToImage} url={e.url}
@@ -112,7 +116,7 @@ export class news extends Component {
                             })
                             }
                         </div>
-                    </div>
+                   
                 </InfiniteScroll>
                 {/* <div className="container d-flex justify-content-between my-3">
                     <button disabled={this.state.page <= 1} type="button" onClick={this.clickPrev} className="btn btn-dark">Previous</button>
