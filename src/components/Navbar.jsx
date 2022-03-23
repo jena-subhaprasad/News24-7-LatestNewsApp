@@ -10,32 +10,32 @@ export class Navbar extends Component {
             <>
                 <nav className="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
                     <div className="container-fluid">
-                        <Link className="navbar-brand" to="/">NEWS 24*7</Link>
+                        <Link className="navbar-brand fs-2 " to="/"><em><b>NEWS 24*7</b></em></Link>
                         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                             <span className="navbar-toggler-icon"></span>
                         </button>
                         <div className="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                                 <li className="nav-item">
-                                    <Link className="nav-link active text-decoration-none" aria-current="page" to="/home">Home</Link>
+                                    <Link className="nav-link active text-decoration-none fs-2 m-r-4" aria-current="page" to="/home">Home</Link>
                                 </li>
                                 <li className="nav-item">
-                                    <Link className="nav-link text-decoration-none" to="/health">Health</Link>
+                                    <Link className="nav-link text-decoration-none fs-2 m-r-4" to="/health">Health</Link>
                                 </li>
                                 <li className="nav-item">
-                                    <Link className="nav-link text-decoration-none" to="/science">Science</Link>
+                                    <Link className="nav-link text-decoration-none fs-2 m-r-4" to="/science">Science</Link>
                                 </li>
                                 <li className="nav-item">
-                                    <Link className="nav-link text-decoration-none" to="/sports">Sports</Link>
+                                    <Link className="nav-link text-decoration-none fs-2 m-r-4" to="/sports">Sports</Link>
                                 </li>
                                 <li className="nav-item">
-                                    <Link className="nav-link text-decoration-none" to="/technology">Technology</Link>
+                                    <Link className="nav-link text-decoration-none fs-2 m-r-4" to="/technology">Technology</Link>
                                 </li>
                                 <li className="nav-item">
-                                    <Link className="nav-link text-decoration-none" to="/business">Business</Link>
+                                    <Link className="nav-link text-decoration-none fs-2 m-r-4" to="/business">Business</Link>
                                 </li>
                                 <li className="nav-item">
-                                    <Link className="nav-link text-decoration-none" to="/entertainment">Entertainment</Link>
+                                    <Link className="nav-link text-decoration-none fs-2 m-r-4" to="/entertainment">Entertainment</Link>
                                 </li>
 
 
