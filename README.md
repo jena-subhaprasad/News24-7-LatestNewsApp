@@ -1,4 +1,4 @@
-#HOSTED URL:-https://news24-7-latest-news-app.vercel.app/entertainment
+#HOSTED URL:-https://news24-7-latest-news-app.vercel.app/science
 
 # Getting Started with Create React App
 
