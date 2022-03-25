@@ -75,6 +75,9 @@ let url=`https://api.currentsapi.services/v1/latest-news?&apiKey=3GNhCaYVjRDs7zP
 
 
     }
+    /*   {this.state.article.map((e) => {
+                                return <div className="col-md-4 my-2 mb-3 d-flex align-items-stretch" key={e.url}>
+                                    <NewsItems title={e.title} description={e.description} imageurl={e.urlToImage} url={e.url} */
 
     // clickPrev = async () => {
     //     let url = `https://newsapi.org/v2/top-headlines?country=in&category=${this.props.category}&apiKey=f03e01d50c2e4ffabc8085e819003fcb&page=${this.state.page - 1}&pageSize=12`;
