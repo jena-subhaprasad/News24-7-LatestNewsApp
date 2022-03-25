@@ -11,7 +11,7 @@ export class NewsItems extends Component {
             {/* <span class="position-absolute top-0 translate-middle badge rounded-pill bg-danger" style={{left:'88%',zIndex:'1',down:'10%'}}>
                         {this.props.source}
                     </span> */}
-                <img src={imageurl ? imageurl : "https://freepikpsd.com/file/2019/10/no-image-png-5-Transparent-Images.png"} className="card-img-top" alt="..."
+                <img src={imageurl!=='none' ? imageurl : "https://freepikpsd.com/file/2019/10/no-image-png-5-Transparent-Images.png"} className="card-img-top" alt="..."
                     style={{ height: "230px" }} />
                 <div className="card-body">
                     <h5 className="card-title">{title}</h5>

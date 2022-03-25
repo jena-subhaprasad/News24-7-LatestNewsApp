@@ -30,22 +30,33 @@ export class news extends Component {
     async componentDidMount() {
         // https://saurav.tech/NewsAPI/top-headlines/category/health/in.json
         // let url = `https://newsapi.org/v2/top-headlines?country=in&category=${this.props.category}&apiKey=91da526b19a44a05bf694475448c0070&pageSize=12`;
+let url=`https://api.currentsapi.services/v1/latest-news?&apiKey=3GNhCaYVjRDs7zPKoo0_Szf5ulZSvK6PRb_cjWU_1b384WS9`
 
-        let url = `https://saurav.tech/NewsAPI/top-headlines/category/${this.props.category}/in.json`;
+        // let url = `https://saurav.tech/NewsAPI/top-headlines/category/${this.props.category}/in.json`;
+        // var url = 'https://api.currentsapi.services/v1/latest-news?' +
+        // 'language=us&' +
+        // 'apiKey=3GNhCaYVjRDs7zPKoo0_Szf5ulZSvK6PRb_cjWU_1b384WS9';
+        // var req = new Request(url);
+        // fetch(req)
+        // .then(function(response) {
+        //     console.log(response.json());
+        // })
+
         this.setState({ loading: true })
         let data = await fetch(url);
         let parseddata = await data.json();
         this.setState({ loading: false })
         this.setState({
-            article: parseddata.articles,
-            totalResults: parseddata.totalResults
+            article: parseddata.news,
+            // totalResults: parseddata.totalResults
         })
     }
 
     fetchMoreData = async () => {
 
-       // let url = `https://newsapi.org/v2/top-headlines?country=in&category=${this.props.category}&apiKey=91da526b19a44a05bf694475448c0070&page=${this.state.page + 1}&pageSize=12`;
-        let url = `https://saurav.tech/NewsAPI/top-headlines/category/${this.props.category}/in.json`;
+    //    let url = `https://newsapi.org/v2/top-headlines?country=in&category=${this.props.category}&apiKey=91da526b19a44a05bf694475448c0070&page=${this.state.page + 1}&pageSize=12`;
+        // let url = `https://saurav.tech/NewsAPI/top-headlines/category/${this.props.category}/&page=${2}&pageSize=12/in.json`;
+        let url=`https://api.currentsapi.services/v1/latest-news?&apiKey=3GNhCaYVjRDs7zPKoo0_Szf5ulZSvK6PRb_cjWU_1b384WS9`
 
         this.setState({
             page: this.state.page + 1
@@ -57,7 +68,8 @@ export class news extends Component {
 
             // loading: false,
             totalResults: parseddata.totalResults,
-            article: this.state.article.concat(parseddata.articles)
+            article: this.state.news
+            // .concat(parseddata.articles)
         })
 
 
@@ -98,16 +110,17 @@ export class news extends Component {
                 {/* {this.state.loading && <Spinner />} */}
                 <Carousel fart={this.state.article[3]} sart={this.state.article[2]} tart={this.state.article[0]}/>
 
-                <InfiniteScroll
+                {/* <InfiniteScroll
                     dataLength={this.state.article.length}
                     next={this.fetchMoreData}
                     hasMore={this.state.article.length < 44}
                     loader={<Spinner />}
-                >  <div className="row my-2">
+                >  */}
+                <div className="row my-2"> 
                             {this.state.article.map((e) => {
-                                return <div className="col-md-4 my-2 mb-2 d-flex align-items-stretch" key={e.url}>
-                                    <NewsItems title={e.title} description={e.description} imageurl={e.urlToImage} url={e.url}
-                                        author={e.author ? e.author : "Unknown"} time={e.publishedAt} source={e.source.name} />
+                                return <div className="col-md-4 my-2 mb-2 d-flex align-items-stretch" key={e.id}>
+                                    <NewsItems title={e.title} description={e.description} imageurl={e.image} url={e.url}
+                                        author={e.author ? e.author : "Unknown"}  />
                                 </div>
 
                             })
@@ -116,7 +129,7 @@ export class news extends Component {
                         
                         
                    
-                </InfiniteScroll>
+                {/* </InfiniteScroll> */}
                 {/* <div className="container d-flex justify-content-between my-3">
                     <button disabled={this.state.page <= 1} type="button" onClick={this.clickPrev} className="btn btn-dark">Previous</button>
                     <button type="button" disabled={this.state.page + 1 > Math.ceil(this.state.totalResults / 12)} onClick={this.clickNext} className="btn btn-dark">Next</button>
