@@ -17,8 +17,8 @@ export class news extends Component {
         this.state = {
             article: this.article,
             totalResults: 0,
-            start:0,
-            end:9
+            start:3,
+            end:12
 
         }
     }
