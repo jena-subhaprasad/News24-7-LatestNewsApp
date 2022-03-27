@@ -88,7 +88,7 @@ export class news extends Component {
     render() {
         return (<>
             <div className="container ">
-            <h1 class="deepshd tstyle">{this.Capitalize(this.props.logo)}</h1>
+            <h1 class="tstyle">{this.Capitalize(this.props.logo)}</h1>
                 {/* <h1 className="text-center" ><em>{this.Capitalize(this.props.logo)}</em></h1> */}
 
                 <Carousel fart={this.state.article[2]} sart={this.state.article[1]} tart={this.state.article[0]} />

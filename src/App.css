@@ -16,7 +16,7 @@ box-shadow: 0 10px 20px rgb(249, 253, 252), 0 4px 8px rgb(236, 231, 231);
   background-color:rgba(245, 250, 249, 0.205);
   border-radius: 4px;
     background: #fff;
-    box-shadow: 0 8px 10px rgb(245, 243, 243), 0 0 6px rgb(243, 238, 238);
+    box-shadow: 0 8px 10px rgb(139, 138, 138), 0 0 6px rgb(165, 161, 161);
       transition: .3s transform cubic-bezier(.155,1.105,.295,1.12),.3s box-shadow,.3s -webkit-transform cubic-bezier(.155,1.105,.295,1.12);
   padding: 14px 80px 18px 36px;
   cursor: pointer;
@@ -24,6 +24,7 @@ box-shadow: 0 10px 20px rgb(249, 253, 252), 0 4px 8px rgb(236, 231, 231);
 
 #myCarousel{
   margin-bottom: 30px;
+  box-shadow: 0 5px 10px rgb(139, 138, 138), 0 0 5px rgb(165, 161, 161)
 }
 .navbar
 {
@@ -134,4 +135,13 @@ box-shadow: 0 10px 20px rgb(249, 253, 252), 0 4px 8px rgb(236, 231, 231);
   text-align: center;
   /* text-transform: uppercase; */
   text-rendering: optimizeLegibility;
+  
+}
+.bg-dark {
+  --bs-bg-opacity: 0.92;
+}
+.btnnp
+{
+  font-size: 18px;
+  border-radius: 25px;
 }
