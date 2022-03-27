@@ -17,7 +17,7 @@ export class NewsItems extends Component {
                     <h5 className="card-title">{title}</h5>
                     <p className="card-text">{description ? description.slice(0, 162) : null}</p>
                     <p className="card-text"><small className="text-muted">By {this.props.author} on {new Date(this.props.time).toLocaleString()}</small></p>
-                    <a rel="noreferrer" href={this.props.url} className="btn btn-sm btn-dark" target="_blank">READ MORE...</a>
+                    <a rel="noreferrer" href={this.props.url} className="btn btn-sm btn-dark" target="_blank">Read...</a>
                 </div>
             </div>
 
