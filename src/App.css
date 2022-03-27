@@ -1,6 +1,3 @@
-.App {
-  text-align: center;
-}
 
 
 /* .carousel-inner > .item > img {
@@ -8,35 +5,117 @@
   height:360px;
 } */
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
 
-.App-link {
-  color: #61dafb;
-}
-.tgl{
-  text-align: center;
-  font-size:x-small;
-}
 .card:hover{
   transform: scale(1.05);
 box-shadow: 0 10px 20px rgba(27, 27, 27, 0.12), 0 4px 8px rgba(32, 32, 32, 0.06);
 }
 .card{
   background-color:rgba(231, 219, 219, 0.205);
-  border-radius: 15px;
+  border-radius: 4px;
+    background: #fff;
+    box-shadow: 0 8px 10px rgba(2, 2, 2, 0.08), 0 0 6px rgba(0,0,0,.05);
+      transition: .3s transform cubic-bezier(.155,1.105,.295,1.12),.3s box-shadow,.3s -webkit-transform cubic-bezier(.155,1.105,.295,1.12);
+  padding: 14px 80px 18px 36px;
+  cursor: pointer;
 }
 
 #myCarousel{
   margin-bottom: 30px;
 }
+.navbar
+{
+  margin-bottom: -12px
+}
 
+.footer-dark {
+  padding: 20px 0;
+  color: #f0f9ff;
+  
+}
+
+.footer-dark h3 {
+  margin-top: 0;
+  margin-bottom: 12px;
+  font-weight: bold;
+  font-size: 16px
+}
+
+.footer-dark ul {
+  padding: 0;
+  list-style: none;
+  line-height: 1.6;
+  font-size: 14px;
+  margin-bottom: 0
+}
+
+.footer-dark ul a {
+  color: inherit;
+  text-decoration: none;
+  opacity: 0.6
+}
+
+.footer-dark ul a:hover {
+  opacity: 0.8
+}
+
+@media (max-width:767px) {
+  .footer-dark .item:not(.social) {
+      text-align: center;
+      padding-bottom: 20px
+  }
+}
+
+.footer-dark .item.text {
+  margin-bottom: 36px
+}
+
+@media (max-width:767px) {
+  .footer-dark .item.text {
+      margin-bottom: 0
+  }
+}
+
+.footer-dark .item.text p {
+  opacity: 0.6;
+  margin-bottom: 0
+}
+
+.footer-dark .item.social {
+  text-align: center
+}
+
+@media (max-width:991px) {
+  .footer-dark .item.social {
+      text-align: center;
+      margin-top: 20px
+  }
+}
+
+.footer-dark .item.social>a {
+  font-size: 20px;
+  width: 36px;
+  height: 36px;
+  line-height: 36px;
+  display: inline-block;
+  text-align: center;
+  border-radius: 50%;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.4);
+  margin: 0 8px;
+  color: #fff;
+  opacity: 0.75
+}
+
+.footer-dark .item.social>a:hover {
+  opacity: 0.9
+}
+
+.copyright {
+  text-align: center;
+  padding-top: 18px;
+  opacity: 0.9;
+  font-size: 13px;
+  margin-bottom: 0;
+  color:white
+}
 

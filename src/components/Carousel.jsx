@@ -17,7 +17,7 @@ export class Carousel extends Component {
                          <div className="carousel-inner">
 
                             <div className="item active">
-                               <a href={this.props.fart.url}> <img src={this.props.fart.urlToImage} alt="Los Angeles" style={{width:"100%",height:"430px"}} /></a>
+                               <a href={this.props.fart.url}> <img src={this.props.fart.urlToImage} alt="Los Angeles" style={{width:"100%",height:"370px"}} /></a>
                                 <div className="carousel-caption">
                                     <h3>{this.props.fart.title}</h3>
                                    
@@ -25,7 +25,7 @@ export class Carousel extends Component {
                             </div>
 
                             <div className="item">
-                               <a href={this.props.sart.url}> <img src={this.props.sart.urlToImage} alt="Chicago" style={{width:"100%",height:"430px"}} /></a>
+                               <a href={this.props.sart.url}> <img src={this.props.sart.urlToImage} alt="Chicago" style={{width:"100%",height:"370px"}} /></a>
                                 <div className="carousel-caption">
                                     <h3>{this.props.sart.title}</h3>
                                     
@@ -33,7 +33,9 @@ export class Carousel extends Component {
                             </div>
 
                             <div className="item">
-                                <a href={this.props.tart.url}><img src={this.props.tart.urlToImage} alt="New York" style={{width:"100%",height:"430px"}} /></a>
+                                <a href={this.props.tart.url}><img src={this.props.tart.urlToImage==='none'?"https://freepikpsd.com/file/2019/10/no-image-png-5-Transparent-Images.png":this.props.tart.urlToImage} 
+                                alt="New York" style={{width:"100%",height:"370px"}} />
+                                </a>
                                 <div className="carousel-caption">
                                     <h3>{this.props.tart.title}</h3>
                                     
