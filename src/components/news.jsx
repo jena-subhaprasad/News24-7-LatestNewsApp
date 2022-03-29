@@ -1,8 +1,6 @@
 import React, { Component } from 'react'
 import Footer from './Footer';
 import NewsItems from './NewsItems'
-// import Spinner from './spinner';
-// import InfiniteScroll from 'react-infinite-scroll-component';
 import Carousel from './Carousel';
 import Pagination from './Pagination';
 //91da526b19a44a05bf694475448c0070
@@ -19,8 +17,9 @@ export class news extends Component {
             totalResults: 0,
             start:3,
             end:12
-
+        
         }
+        console.log("calling constructor");
     }
 
 
@@ -37,31 +36,12 @@ export class news extends Component {
 
         let data = await fetch(url);
         let parseddata = await data.json();
-        this.setState({ loading: false })
         this.setState({
             article: parseddata.articles,
             totalResults: parseddata.totalResults
         })
+        console.log("component is rendered")
     }
-
-    fetchMoreData = async () => {
-
-        //    let url = `https://newsapi.org/v2/top-headlines?country=in&category=${this.props.category}&apiKey=91da526b19a44a05bf694475448c0070&page=${this.state.page + 1}&pageSize=12`;
-        let url = `https://saurav.tech/NewsAPI/top-headlines/category/${this.props.category}/in.json`;
-        // let url=`https://api.currentsapi.services/v1/latest-news?&apiKey=3GNhCaYVjRDs7zPKoo0_Szf5ulZSvK6PRb_cjWU_1b384WS9`
-
-        // this.setState({
-        //     page: this.state.page + 1
-        // });
-        this.setState({ loading: true });
-        let data = await fetch(url);
-        let parseddata = await data.json();
-
-        this.setState({
-            totalResults: parseddata.totalResults,
-            article: parseddata.articles
-
-        })}
 
         forward=()=>{
             window.scrollTo(0, 0)
@@ -86,10 +66,12 @@ export class news extends Component {
         }
 
     render() {
+        console.log("Render is rendered")
         return (<>
+
             <div className="container ">
             <h1 class="tstyle">{this.Capitalize(this.props.logo)}</h1>
-                {/* <h1 className="text-center" ><em>{this.Capitalize(this.props.logo)}</em></h1> */}
+                
 
                 <Carousel fart={this.state.article[2]} sart={this.state.article[1]} tart={this.state.article[0]} />
 
