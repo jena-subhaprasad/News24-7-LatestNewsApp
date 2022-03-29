@@ -147,3 +147,6 @@ box-shadow: 0 10px 20px rgb(249, 253, 252), 0 4px 8px rgb(236, 231, 231);
 }
 .btn-group-sm>.btn, .btn-sm {
   font-size: 14px;}
+  b, strong {
+    font-weight: 700;
+    color: rgb(171 147 255);}
