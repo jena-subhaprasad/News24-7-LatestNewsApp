@@ -6,11 +6,9 @@ import React, { Component } from 'react'
 import Navbar from './components/Navbar';
 import News from './components/news';
 import {
-  BrowserRouter as Router,
-
-  Route,
-
-  Routes
+BrowserRouter as Router,
+Route,
+Routes
 } from "react-router-dom";
 
 

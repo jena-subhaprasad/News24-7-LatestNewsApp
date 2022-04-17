@@ -7,7 +7,7 @@ const Pagination = (props) => {
             <button  type="button" className="btn btn-dark btnnp" onClick={props.prev}
                     disabled={props.strt-9 < 0}
                     >{`<< Previous`}</button>
-                    <button type="button"  className="btn btn-dark btnnp" onClick={props.next} 
+         <button type="button"  className="btn btn-dark btnnp" onClick={props.next} 
                     disabled={props.last+9 > props.len} >{`Next >>`}</button>
 
             </div>

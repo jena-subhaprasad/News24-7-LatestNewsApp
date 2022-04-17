@@ -19,7 +19,7 @@ export class news extends Component {
             end:12
         
         }
-        console.log("calling constructor");
+        //console.log("calling constructor");
     }
 
 
